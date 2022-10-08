@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-md sticky-top bg-custome">
+        <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-custome">
             <div className="container">
                 <a title="logo" className="navbar-brand" href="/home">
                     <img className="logo-justify" src={logo} alt=""/></a>
@@ -14,16 +14,16 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                        <a className="nav-link text-light active" aria-current="page" href="/order">Order</a>
+                        <a className="nav-link text-light active" aria-current="page" href="/shop">Shop</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-light" href="/order-review">Order Review</a>
+                        <a className="nav-link text-light" href="/order">Order</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-light" href="/manage-inventory">Manage Inventory</a>
+                        <a className="nav-link text-light" href="/inventory">Inventory</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-light" href="/login">Login</a>
+                        <a className="nav-link text-light" href="/about">About</a>
                     </li>
                 </ul>
                 </div>
