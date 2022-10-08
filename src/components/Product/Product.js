@@ -15,7 +15,7 @@ const Product = (props) => {
                         <small>Ratings: {ratings}</small>
                     </div>
                     <div className="">
-                        <button className='btn btn-lg btn-warning w-100 rounded-0'>Add to Cart <i class="fa-solid fa-cart-plus fa-beat"></i></button>
+                        <button className='btn btn-warning w-100 rounded-0'>Add to Cart <i class="fa-solid fa-cart-plus fa-beat"></i></button>
                     </div>
                 </div>
             </div>
