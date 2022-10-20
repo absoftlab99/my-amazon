@@ -8,7 +8,7 @@ const Cart = () => {
         <div className='cart col-2 bg-dark position-fixed end-0 p-3 rounded-4'>
             <h5 className='text-center fw-bold text-light'>Order Summery</h5>
             <hr className='text-light' />
-            <p className='text-light'><small>Selected Items:</small></p>
+            <p className='text-light'><small>Selected Items: </small></p>
             <p className='text-light'><small>Total Price:</small></p>
             <p className='text-light'><small>Total Shipping Charge:</small></p>
             <p className='text-light'><small>Tax:</small></p>

@@ -1,9 +1,16 @@
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Cart from '../Cart/Cart';
 import './Product.css';
 
 const Product = (props) => {
-    console.log(props.product);
-    const {name, img, price, ratings, seller} = props.product;
+    let cartItems = 0;
+    const addToCart = () =>{
+        cartItems = cartItems + 1;
+        console.log(cartItems);
+    }
+    const {id, name, img, price, ratings, seller} = props.product;
     return (
             <div className="col-3 mb-3">
                 <div className="card rounded-4">
@@ -15,7 +22,7 @@ const Product = (props) => {
                         <small>Ratings: {ratings}</small>
                     </div>
                     <div className="">
-                        <button className='btn btn-warning w-100 rounded-0'>Add to Cart <i class="fa-solid fa-cart-plus fa-beat"></i></button>
+                        <button onClick={()=>addToCart(id)} className='btn btn-warning w-100 rounded-0'>Add to Cart <FontAwesomeIcon className='fa-bounce' icon={faCartShopping}></FontAwesomeIcon></button>
                     </div>
                 </div>
             </div>

@@ -1,34 +1,30 @@
 import React from 'react';
 import logo from '../../images/logo.png';
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import { Link } from 'react-router-dom';
+import {Nav, Navbar, Container} from 'react-bootstrap';
 import './Header.css';
 
 const Header = () => {
+    
     return (
-        <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-custome">
-            <div className="container">
-                <a title="logo" className="navbar-brand" href="/home">
-                    <img className="logo-justify" src={logo} alt=""/></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
-                        <a className="nav-link text-light active" aria-current="page" href="/shop">Shop</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link text-light" href="/order">Order</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link text-light" href="/inventory">Inventory</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link text-light" href="/about">About</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
+        <Navbar className='bg-custome sticky fixed-top' expand="md">  
+            <Container>  
+            <Navbar.Brand className='text-light fw-bolder' to="/">
+                <img src={logo} alt='logo' />
+            </Navbar.Brand>  
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />  
+            <Navbar.Collapse id="basic-navbar-nav">  
+                <Nav className="ms-auto menu">
+                    <Nav.Link className='text-light' as={Link} to='/shop'>Shop</Nav.Link>
+                    <Nav.Link className='text-light' as={Link} to='/order'>Order</Nav.Link>
+                    <Nav.Link className='text-light' as={Link} to='/inventory'>Inventory</Nav.Link>
+                    <Nav.Link className='text-light' as={Link} to='/about'>About</Nav.Link>
+                    
+                </Nav>  
+            </Navbar.Collapse>  
+            </Container>  
+        </Navbar>
     );
 };
 
